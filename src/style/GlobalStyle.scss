@@ -1,0 +1,17 @@
+$bg-black: #000000;
+$bg-black-opacity: #0E0E0E;
+
+$color-orage: #FFA31A;
+$color-text-orage: #FF9000;
+$color-line-down: #FF9900;
+$color-text-sinza: #c6c6c6;
+$color-while: #ffffff;
+
+$font-global-Arial: 'Arimo', 'Helvetica', 'sans-serif';
+
+body{
+  width: 100%;
+  height: 100%;
+  background-color: $bg-black;
+  font-family: $font-global-Arial;
+}
