@@ -1,7 +1,109 @@
-.cards{
-  width:316px;
-  height:733px;
+.video-card {
+  background-color: #fff;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  margin: .5rem;
 
-  background: #ddd;
+  &:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  }
+
+  &__wrapper {
+    position: relative;
+    padding-top: 56.25%; // proporção 16:9
+    overflow: hidden;
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    padding: 1rem;
+
+    & > * {
+      margin-bottom: 0.5rem;
+    }
+
+    &__title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 0.25rem;
+    }
+
+    &__description {
+      font-size: 1rem;
+      color: #666;
+    }
+  }
+
+  &--loading {
+    position: relative;
+    background-color: #f5f5f5;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .loading-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff;
+      z-index: 2;
+
+      & > * {
+        margin-bottom: 0.5rem;
+      }
+
+      & > i {
+        font-size: 2rem;
+      }
+
+      & > p {
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+    }
+  }
+
+  // Responsividade
+  @media screen and (max-width: 768px) {
+    &__info {
+      padding: 0.5rem;
+    }
+
+    &__info__title {
+      font-size: 1.125rem;
+    }
+
+    &__info__description {
+      font-size: 0.875rem;
+    }
+  }
 }
+video::-webkit-media-controls-enclosure {
+  appearance: none;
+}
+
+video::-webkit-media-controls-panel {
+  display: none!important;
+}
+
 

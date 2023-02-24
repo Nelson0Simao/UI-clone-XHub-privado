@@ -1,15 +1,29 @@
-.main{
-
-  margin: 1rem 2rem;
-
+.main {
   h1{
-    font-size: 18px;
-    font-weight:700;
-    font-size: 18px;
-    color: #ffffff;
-  }
+  font-size: 20px;
+  color: #ffffff;
+  font-weight:700;
+  font-family: 'Helvetica' 'sans-serif';
+  margin-left: 2rem;
 
-  .content-cards{
-    width: 100%;
+}
+}
+.content-cards {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  justify-content: center;
+  .card {
+    width: calc(33.3333% - 1rem);
+    margin: 0.5rem;
+
+    @media screen and (max-width: 768px) {
+      width: calc(50% - 1rem);
+    }
+
+    @media screen and (max-width: 480px) {
+      width: calc(100% - 1rem);
+    }
   }
 }
+

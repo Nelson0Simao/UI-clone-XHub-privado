@@ -1,7 +1,6 @@
 import React from 'react'
 import './style.scss'
 import logo from './../../assets/logo.svg'
-import { FaBeer } from "react-icons/fa";
 
 function AsideSecand(){
   return(
@@ -10,7 +9,6 @@ function AsideSecand(){
           <img src={logo} class="logo" />
     <form>
         <div class="search">
-              <FaBeer />
               <input type="text" placeholder="Buscar no TestHub"/>
               <button class="btn white">Carregar</button>
               <button class="btn orange">Upgrade</button>

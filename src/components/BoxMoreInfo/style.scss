@@ -1,0 +1,50 @@
+.box-more{
+  width: 100vw;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0rem;
+
+  ul{
+      display: flex;
+      flex-direction: row;
+
+  }
+ul li {
+  list-style: none;
+}
+  div, ul li{
+    width: 52px;
+    height: 55px;
+    border-radius: 3px;
+    font-size: 20px;
+    color: #c6c6c6;
+    line-height:55px;
+    font-weight:700;
+    text-align: center;
+    margin: 0 .5rem;
+    background: #0E0E0E;
+
+    border: solid 3px #00000000;
+
+    &:active{
+    border: solid 3px #FF9900;
+    }
+    &:hover{
+    background: #2F2F2F;
+    }
+  }
+  .more-left{
+    padding: 0 1rem;
+    background: #0E0E0E;
+  }
+  .more-right{
+    padding: 0 1rem;
+    background: #FF9900;
+    &:hover{
+      background: #FF9F0E;
+    }
+
+  }
+}
